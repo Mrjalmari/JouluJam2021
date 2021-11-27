@@ -26,6 +26,9 @@ public class CharacterMovemnt : MonoBehaviour
     [SerializeField]
     private float minY = -10f;
 
+    [SerializeField]
+    private bool allowMoving = false;
+
     private Vector3 previousPoint;
 
     // Start is called before the first frame update
@@ -51,21 +54,25 @@ public class CharacterMovemnt : MonoBehaviour
 
     public void MoveCharacter(float direction)
     {
-        float realSpeed = direction * speed* Time.deltaTime;
-        Vector3 movemntDirection = (transform.right *realSpeed) + transform.position ;
+        if (allowMoving)
+        {
+            float realSpeed = direction * speed * Time.deltaTime;
+            Vector3 movemntDirection = (transform.right * realSpeed) + transform.position;
 
-        rb.position = movemntDirection;
+            rb.position = movemntDirection;
 
-        float distance = Vector3.Distance(previousPoint, transform.position);
-        rpgSystem.SpeedLeveling(distance);
-        previousPoint = transform.position;
+            float distance = Vector3.Distance(previousPoint, transform.position);
+            rpgSystem.SpeedLeveling(distance);
+            previousPoint = transform.position;
+
+        }
 
 
     }
 
     public void Jump()
     {
-        if (isGrounded)
+        if (isGrounded && allowMoving)
         {
             Vector3 force = new Vector3(0, jumpPower, 0);
             //rb.AddForce(force);
@@ -82,6 +89,11 @@ public class CharacterMovemnt : MonoBehaviour
     public void IncreaseJump(float amount)
     {
         jumpPower += amount;
+    }
+
+    public void AllowMovemnt(bool allow)
+    {
+        allowMoving = allow;
     }
 
 }

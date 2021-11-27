@@ -29,13 +29,23 @@ public class CharacterAttack : MonoBehaviour
     [SerializeField]
     private float rangedWaitTime = 2f;
     private float currentRWTime = 0;
-    private bool allowRanged = true;
+    private bool allowRanged = false;
     [SerializeField]
     private float meleeWaitTime = 1f;
     private float currentMWTime = 0;
-    private bool allowMelee = true;
+    private bool allowMelee = false;
 
+    private void Update()
+    {
+        if (currentMWTime >= 0)
+        {
+            currentMWTime -= Time.deltaTime;
+        }
+        else allowMelee = true;
 
+        if (currentRWTime >= 0) currentRWTime -= Time.deltaTime;
+        else allowRanged = true;
+    }
 
     public void ChangeDirection(float newDirection)
     {
@@ -60,6 +70,9 @@ public class CharacterAttack : MonoBehaviour
             {
                rpgSystem.MeleeAttackLeveling( raycastHit.collider.GetComponent<CharacterHealth>().TakeDamage(meleeDamage));
             }
+
+            allowMelee = false;
+            currentMWTime = meleeWaitTime;
         }
     }
 
@@ -73,6 +86,9 @@ public class CharacterAttack : MonoBehaviour
             projectileScript.SetOwner(gameObject);
             projectileScript.SetDirection(directionMod);
             projectileScript.SetDamage(rangedDamage);
+
+            allowRanged = false;
+            currentRWTime = rangedWaitTime;
         }
 
     }
@@ -85,5 +101,17 @@ public class CharacterAttack : MonoBehaviour
     public void IncreaMeleeDamage(float amount)
     {
         meleeDamage += amount;
+    }
+
+    public float GetDirection()
+    {
+        return directionMod;
+    }
+
+
+    public void AllowAttack()
+    {
+        allowMelee = true;
+        allowRanged = true;
     }
 }

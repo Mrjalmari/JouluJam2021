@@ -18,6 +18,8 @@ public class AiAttack : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //directionMod = characterAttack.GetDirection();
+
         Vector3 direction = Vector3.right * directionMod;
 
         if(Physics.Raycast(transform.position, direction, out RaycastHit raycastHit))
@@ -25,11 +27,22 @@ public class AiAttack : MonoBehaviour
             float distance = Vector3.Distance(transform.position, raycastHit.point);
             if (raycastHit.collider.CompareTag("Character") && distance < meleeAttackRange)
             {
+                characterAttack.ChangeDirection(directionMod);
                 characterAttack.MeleeAttack();
+
             }
-            else if (raycastHit.collider.CompareTag("Character")) characterAttack.RangedAttack();
+            else if (raycastHit.collider.CompareTag("Character"))
+            {
+                characterAttack.ChangeDirection(directionMod);
+                characterAttack.RangedAttack();
+            }
 
         }
 
+    }
+
+    public void ChangeDirection( float newDirection)
+    {
+        directionMod = newDirection;
     }
 }

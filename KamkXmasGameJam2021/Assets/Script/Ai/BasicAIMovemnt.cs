@@ -22,8 +22,17 @@ public class BasicAIMovemnt : MonoBehaviour
     private float randomJumpChance = 1f;
 
     [SerializeField]
+    private float obstacleDetectorHeight = -0.5f;
+    [SerializeField]
+    private float obstacleDetectordistance = 1;
+
+
+
     private float timeForRandomness = 5f;
     private float currentTFR; //currentTimeForRandomness;
+
+    [SerializeField]
+    private AiAttack aiAttack;
 
 
     private void Start()
@@ -35,6 +44,8 @@ public class BasicAIMovemnt : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        aiAttack.ChangeDirection(direction);
+
 
         bool randomJump = false;
         if (currentTFR <= 0)
@@ -49,7 +60,15 @@ public class BasicAIMovemnt : MonoBehaviour
         {
             characterMovemnt.Jump(); 
         }
+        /*
+        Debug.DrawLine(transform.position + Vector3.down * obstacleDetectorHeight, Vector3.right * direction + transform.position * obstacleDetectordistance + Vector3.down * obstacleDetectorHeight, Color.blue);
 
+        if (Physics.Raycast(transform.position + Vector3.down * obstacleDetectorHeight, Vector3.right * direction + Vector3.down * obstacleDetectorHeight, out RaycastHit hit, obstacleDetectordistance, groundLayers))
+        {
+           
+            characterMovemnt.Jump();
+        }
+        */
         characterMovemnt.MoveCharacter(direction);
 
     }
