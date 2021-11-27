@@ -1,7 +1,720 @@
 fileFormatVersion: 2
 guid: f4f749fb02f9f6f4abb16bcdcf62c614
-DefaultImporter:
+ScriptedImporter:
+  internalIDToNameTable: []
   externalObjects: {}
+  serializedVersion: 2
   userData: 
   assetBundleName: 
   assetBundleVariant: 
+  script: {fileID: 11500000, guid: b2a9591990af98743ba3ff7cf1000886, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 1
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    isReadable: 0
+    streamingMipmaps: 1
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    ignoreMasterTextureLimit: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 100
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 0
+    wrapV: 0
+    wrapW: 0
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  spriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 0, y: 0}
+  mosaicSpriteImportData: []
+  rigSpriteImportData:
+  - name: "v_olkap\xE4\xE4190"
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 740
+      y: 4
+      width: 361
+      height: 305
+    spriteID: ef5297e1d6e2adc4593f35b3a1f55d70
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 149, y: -1045}
+  - name: v_Arm180
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 740
+      y: 317
+      width: 311
+      height: 263
+    spriteID: 3191e4bfb8c75394e8da674b73039010
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 397, y: -625}
+  - name: R-HAND170
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 501
+      y: 3007
+      width: 219
+      height: 206
+    spriteID: 6e4b3c9d09c8633428dff51aeac429e0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 259, y: 2141}
+  - name: 160
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 728
+      height: 1000
+    spriteID: 38b5017d0fee2d84f94c5176ebb7b579
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -168, y: -150}
+  - name: V_Jalka150
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1109
+      y: 4
+      width: 368
+      height: 228
+    spriteID: 55e96a540fb761248b3b96e578f054e5
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -22, y: -225}
+  - name: V_Varvas140
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 740
+      y: 845
+      width: 219
+      height: 118
+    spriteID: a76c30267cca75d43bf624f54aaf2cf6
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -696, y: 623}
+  - name: Leg130
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 2586
+      width: 403
+      height: 413
+    spriteID: d910bf486a8137147824938b8df80e45
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -927, y: 2312}
+  - name: V_Reisi120
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 3704
+      width: 437
+      height: 271
+    spriteID: 04bca85082214264780d5f6d952fff39
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -594, y: 3128}
+  - name: "P\xE4\xE4110"
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 1012
+      width: 667
+      height: 604
+    spriteID: 5d1475de661980a4f991357005b91b4b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -585, y: -138}
+  - name: Rinta100
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 415
+      y: 2586
+      width: 274
+      height: 324
+    spriteID: 1a9082b921d5c5040b65f7746b066975
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -350, y: 1730}
+  - name: Kaula90
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 501
+      y: 3221
+      width: 118
+      height: 90
+    spriteID: 2286f00ba69f19d41aab98a3d1b7ab15
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -411, y: 2091}
+  - name: Lantio80
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 740
+      y: 588
+      width: 284
+      height: 249
+    spriteID: c04b7a60fb2c03b47828858850ff020f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 134, y: -86}
+  - name: "H\xE4nt\xE470"
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 1624
+      width: 592
+      height: 443
+    spriteID: 5bf25d8c73b74f54fa14ea4f52ce72bc
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -171, y: 977}
+  - name: Jalka60
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 384
+      y: 3327
+      width: 320
+      height: 299
+    spriteID: 8178cde0c5a6828488ccd9f305da83d5
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 379, y: 3147}
+  - name: O_Varvas50
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 604
+      y: 1624
+      width: 104
+      height: 225
+    spriteID: f19a189e18583db4b8830ab4959594ff
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 604, y: 1622}
+  - name: O_Leg40
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 3007
+      width: 489
+      height: 312
+    spriteID: 8a29af85bfa9a24478057d72fea0dd3b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -99, y: 2687}
+  - name: O_reisi30
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 3327
+      width: 372
+      height: 369
+    spriteID: 2a9c7ef9a74478645a605af8e098ba1a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -455, y: 2828}
+  - name: O_olka20
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 449
+      y: 3704
+      width: 279
+      height: 341
+    spriteID: 0f3f0b0f769686146b80c1366b9d520e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -385, y: 2708}
+  - name: Kilpi10
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 2075
+      width: 502
+      height: 503
+    spriteID: 46a522d0d204b4a469c929eb17ce2b5d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -958, y: 1345}
+  characterData:
+    bones: []
+    parts: []
+    dimension: {x: 0, y: 0}
+    characterGroups: []
+    boneReadOnly: 0
+  sharedRigSpriteImportData: []
+  sharedRigCharacterData:
+    bones: []
+    parts: []
+    dimension: {x: 0, y: 0}
+    characterGroups: []
+    boneReadOnly: 0
+  platformSettings: []
+  mosaicLayers: 1
+  characterMode: 1
+  documentPivot: {x: 0, y: 0}
+  documentAlignment: 7
+  importHiddenLayers: 0
+  layerMappingOption: 2
+  generatePhysicsShape: 0
+  paperDollMode: 0
+  keepDupilcateSpriteName: 1
+  skeletonAssetReferenceID: 
+  spriteCategoryList:
+    categories: []
+  spritePackingTag: 
+  resliceFromLayer: 0
+  mosaicPSDLayers: []
+  rigPSDLayers:
+  - name: "v_olkap\xE4\xE4190"
+    spriteName: "v_olkap\xE4\xE4190"
+    isGroup: 0
+    parentIndex: -1
+    spriteID: ef5297e1d6e2adc4593f35b3a1f55d70
+    layerID: 20
+    mosaicPosition: {x: 740, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: v_Arm180
+    spriteName: v_Arm180
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 3191e4bfb8c75394e8da674b73039010
+    layerID: 19
+    mosaicPosition: {x: 740, y: 317}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: R-HAND170
+    spriteName: R-HAND170
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 6e4b3c9d09c8633428dff51aeac429e0
+    layerID: 18
+    mosaicPosition: {x: 501, y: 3007}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: 160
+    spriteName: 160
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 38b5017d0fee2d84f94c5176ebb7b579
+    layerID: 17
+    mosaicPosition: {x: 4, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: V_Jalka150
+    spriteName: V_Jalka150
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 55e96a540fb761248b3b96e578f054e5
+    layerID: 16
+    mosaicPosition: {x: 1109, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: V_Varvas140
+    spriteName: V_Varvas140
+    isGroup: 0
+    parentIndex: -1
+    spriteID: a76c30267cca75d43bf624f54aaf2cf6
+    layerID: 15
+    mosaicPosition: {x: 740, y: 845}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Leg130
+    spriteName: Leg130
+    isGroup: 0
+    parentIndex: -1
+    spriteID: d910bf486a8137147824938b8df80e45
+    layerID: 14
+    mosaicPosition: {x: 4, y: 2586}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: V_Reisi120
+    spriteName: V_Reisi120
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 04bca85082214264780d5f6d952fff39
+    layerID: 13
+    mosaicPosition: {x: 4, y: 3704}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: "P\xE4\xE4110"
+    spriteName: "P\xE4\xE4110"
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 5d1475de661980a4f991357005b91b4b
+    layerID: 12
+    mosaicPosition: {x: 4, y: 1012}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Rinta100
+    spriteName: Rinta100
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 1a9082b921d5c5040b65f7746b066975
+    layerID: 11
+    mosaicPosition: {x: 415, y: 2586}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Kaula90
+    spriteName: Kaula90
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 2286f00ba69f19d41aab98a3d1b7ab15
+    layerID: 10
+    mosaicPosition: {x: 501, y: 3221}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Lantio80
+    spriteName: Lantio80
+    isGroup: 0
+    parentIndex: -1
+    spriteID: c04b7a60fb2c03b47828858850ff020f
+    layerID: 9
+    mosaicPosition: {x: 740, y: 588}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: "H\xE4nt\xE470"
+    spriteName: "H\xE4nt\xE470"
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 5bf25d8c73b74f54fa14ea4f52ce72bc
+    layerID: 8
+    mosaicPosition: {x: 4, y: 1624}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Jalka60
+    spriteName: Jalka60
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 8178cde0c5a6828488ccd9f305da83d5
+    layerID: 7
+    mosaicPosition: {x: 384, y: 3327}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: O_Varvas50
+    spriteName: O_Varvas50
+    isGroup: 0
+    parentIndex: -1
+    spriteID: f19a189e18583db4b8830ab4959594ff
+    layerID: 6
+    mosaicPosition: {x: 604, y: 1624}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: O_Leg40
+    spriteName: O_Leg40
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 8a29af85bfa9a24478057d72fea0dd3b
+    layerID: 5
+    mosaicPosition: {x: 4, y: 3007}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: O_reisi30
+    spriteName: O_reisi30
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 2a9c7ef9a74478645a605af8e098ba1a
+    layerID: 4
+    mosaicPosition: {x: 4, y: 3327}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: O_olka20
+    spriteName: O_olka20
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 0f3f0b0f769686146b80c1366b9d520e
+    layerID: 3
+    mosaicPosition: {x: 449, y: 3704}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Kilpi10
+    spriteName: Kilpi10
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 46a522d0d204b4a469c929eb17ce2b5d
+    layerID: 2
+    mosaicPosition: {x: 4, y: 2075}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  sharedRigPSDLayers: []
+  pSDLayerImportSetting: []
+  generateGOHierarchy: 0
+  textureAssetName: 
+  prefabAssetName: 
+  spriteLibAssetName: 
+  skeletonAssetName: 
+  secondarySpriteTextures: []

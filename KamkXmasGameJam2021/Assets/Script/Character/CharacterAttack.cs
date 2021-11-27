@@ -26,6 +26,16 @@ public class CharacterAttack : MonoBehaviour
     private RPGSystem rpgSystem;
 
 
+    [SerializeField]
+    private float rangedWaitTime = 2f;
+    private float currentRWTime = 0;
+    private bool allowRanged = true;
+    [SerializeField]
+    private float meleeWaitTime = 1f;
+    private float currentMWTime = 0;
+    private bool allowMelee = true;
+
+
 
     public void ChangeDirection(float newDirection)
     {
@@ -44,7 +54,7 @@ public class CharacterAttack : MonoBehaviour
     {
         Vector3 startPoint = new Vector3(transform.position.x + (attackPointDistance* directionMod ), transform.position.y + attackpointHeight ,transform.position.z);
 
-        if(Physics.Raycast(startPoint, Vector3.right*directionMod, out RaycastHit raycastHit, meleeMaxDistance))
+        if(Physics.Raycast(startPoint, Vector3.right*directionMod, out RaycastHit raycastHit, meleeMaxDistance) && allowMelee)
         {
             if (raycastHit.collider.CompareTag("Character"))
             {
@@ -55,12 +65,16 @@ public class CharacterAttack : MonoBehaviour
 
     public void RangedAttack()
     {
-        Vector3 startPoint = new Vector3(transform.position.x + (attackPointDistance * directionMod), transform.position.y + attackpointHeight, transform.position.z);
-        GameObject projectileInstant = Instantiate(projectile, startPoint, transform.rotation);
-        ProjectileScript projectileScript = projectileInstant.GetComponent<ProjectileScript>();
-        projectileScript.SetOwner(gameObject);
-        projectileScript.SetDirection(directionMod);
-        projectileScript.SetDamage(rangedDamage);
+        if (allowRanged)
+        {
+            Vector3 startPoint = new Vector3(transform.position.x + (attackPointDistance * directionMod), transform.position.y + attackpointHeight, transform.position.z);
+            GameObject projectileInstant = Instantiate(projectile, startPoint, transform.rotation);
+            ProjectileScript projectileScript = projectileInstant.GetComponent<ProjectileScript>();
+            projectileScript.SetOwner(gameObject);
+            projectileScript.SetDirection(directionMod);
+            projectileScript.SetDamage(rangedDamage);
+        }
+
     }
 
     public void IncreaseRangedDamage(float amount)
