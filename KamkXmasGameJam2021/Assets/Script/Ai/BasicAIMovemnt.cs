@@ -85,6 +85,11 @@ public class BasicAIMovemnt : MonoBehaviour
         return false;
     }
 
+    public void ResetDirection()
+    {
+        direction = 1;
+    }
+
     private bool RandomBool(float chance)
     {
         bool randBool = false;

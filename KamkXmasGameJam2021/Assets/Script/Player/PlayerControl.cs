@@ -16,7 +16,7 @@ public class PlayerControl : MonoBehaviour
         characterAttack.ChangeDirection(Input.GetAxis("Horizontal"));
         
 
-        if (Input.GetButton("Jump"))
+        if (Input.GetButtonDown("Jump"))
         {
             characterMovemnt.Jump();
         }

@@ -35,3 +35,9 @@ sysinfo.txt
 # Builds
 *.apk
 *.unitypackage
+KamkXmasGameJam2021/ProjectSettings/Packages/com.unity.probuilder/Settings.json
+KamkXmasGameJam2021/ProjectSettings/SceneTemplateSettings.json
+KamkXmasGameJam2021/Logs/shadercompiler-UnityShaderCompiler.exe7.log
+KamkXmasGameJam2021/Logs/shadercompiler-AssetImportWorker0.log
+KamkXmasGameJam2021/Logs/AssetImportWorker1.log
+KamkXmasGameJam2021/Logs/AssetImportWorker0.log

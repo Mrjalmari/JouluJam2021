@@ -15,14 +15,15 @@ public class ProjectileScript : MonoBehaviour
     [SerializeField]
     private float lifeTime = 2;
 
-    private void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject != owner && collision.collider.CompareTag("Character"))
-        {
-            collision.gameObject.GetComponent<CharacterHealth>().TakeDamage(damage);
-        }
 
-        Destroy(gameObject);
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject != owner && other.CompareTag("Character"))
+        {
+            owner.GetComponent<RPGSystem>().RangedAttackLeveling(other.gameObject.GetComponent<CharacterHealth>().TakeDamage(damage));
+        }
+        if (other.gameObject != owner)
+            Destroy(gameObject);
     }
 
     private void Start()
@@ -46,6 +47,16 @@ public class ProjectileScript : MonoBehaviour
     public void SetDirection(float newDirection)
     {
         directionVelocity = new Vector3(newDirection * velocity, 0, 0);
+    }
+
+    public void SetDamage(float amount)
+    {
+        damage = amount;
+    }
+
+    public void SetOwner(GameObject newOwner)
+    {
+        owner = newOwner;
     }
 
 }

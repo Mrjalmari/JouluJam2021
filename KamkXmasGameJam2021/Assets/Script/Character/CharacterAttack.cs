@@ -19,6 +19,11 @@ public class CharacterAttack : MonoBehaviour
     private float meleeDamage = 1f;
     [SerializeField]
     private GameObject projectile;
+    [SerializeField]
+    public float rangedDamage = 1;
+
+    [SerializeField]
+    private RPGSystem rpgSystem;
 
 
 
@@ -43,7 +48,7 @@ public class CharacterAttack : MonoBehaviour
         {
             if (raycastHit.collider.CompareTag("Character"))
             {
-                raycastHit.collider.GetComponent<CharacterHealth>().TakeDamage(meleeDamage);
+               rpgSystem.MeleeAttackLeveling( raycastHit.collider.GetComponent<CharacterHealth>().TakeDamage(meleeDamage));
             }
         }
     }
@@ -52,6 +57,19 @@ public class CharacterAttack : MonoBehaviour
     {
         Vector3 startPoint = new Vector3(transform.position.x + (attackPointDistance * directionMod), transform.position.y + attackpointHeight, transform.position.z);
         GameObject projectileInstant = Instantiate(projectile, startPoint, transform.rotation);
-        projectileInstant.GetComponent<ProjectileScript>().SetDirection(directionMod);
+        ProjectileScript projectileScript = projectileInstant.GetComponent<ProjectileScript>();
+        projectileScript.SetOwner(gameObject);
+        projectileScript.SetDirection(directionMod);
+        projectileScript.SetDamage(rangedDamage);
+    }
+
+    public void IncreaseRangedDamage(float amount)
+    {
+        rangedDamage += amount;
+    }
+
+    public void IncreaMeleeDamage(float amount)
+    {
+        meleeDamage += amount;
     }
 }

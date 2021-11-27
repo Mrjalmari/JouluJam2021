@@ -24,16 +24,20 @@ public class RPGSystem : MonoBehaviour
     private float requiredXpJump = 100f;
     [SerializeField]
     private float xpPerJump = 10;
+    [SerializeField]
+    private float jumpIncrease = 1;
 
 
     //ranged attack
 
     private int rangedLevel = 1;
-    private float ranged = 0;
+    private float rangedXp = 0;
     [SerializeField]
     private float requiredXpRanged = 100f;
     [SerializeField]
     private float xpPerRange = 10;
+    [SerializeField]
+    private float RangedDamageIncrease = 1;
     //Melee attack
 
     private int meleeLevel = 1;
@@ -42,6 +46,8 @@ public class RPGSystem : MonoBehaviour
     private float requiredXpMelee = 100f;
     [SerializeField]
     private float xpPerMelee = 10;
+    [SerializeField]
+    private float meleeDamageIncrease = 1;
 
     //health
 
@@ -51,6 +57,8 @@ public class RPGSystem : MonoBehaviour
     private float requiredXpHealth = 100f;
     [SerializeField]
     private float xpPerHit = 10;
+    [SerializeField]
+    private float healthPerLevel = 2;
 
     //Character Stuff
     [SerializeField]
@@ -69,8 +77,9 @@ public class RPGSystem : MonoBehaviour
         if(speedXp >= requiredXpSpeed)
         {
             speedLevel++;
-            requiredXpSpeed = requiredXpSpeed * speedLevel;
+            requiredXpSpeed = requiredXpSpeed * (speedLevel * 1.5f);
             characterMovemnt.IncreaseSpeed(speedIncrease);
+            Debug.Log("Level up: Speed");
         }
 
     }
@@ -78,11 +87,56 @@ public class RPGSystem : MonoBehaviour
     public void JumpLeveling()
     {
         jumpXp += xpPerJump;
-        if (xpPerJump >= requiredXpJump)
+        if (jumpXp >= requiredXpJump)
         {
             jumpLevel++;
-            requiredXpJump = requiredXpJump * jumpLevel;
+            requiredXpJump = requiredXpJump * (jumpLevel * 1.5f);
+            characterMovemnt.IncreaseJump(jumpIncrease);
+            Debug.Log("Level up: Jump");
         }
 
     }
+
+
+    public void RangedAttackLeveling(float dealtDamage)
+    {
+        rangedXp += dealtDamage * xpPerRange;
+
+        if (rangedXp >= requiredXpRanged)
+        {
+            rangedLevel++;
+            requiredXpRanged = requiredXpRanged * (rangedLevel * 1.5f);
+            characterAttack.IncreaseRangedDamage(RangedDamageIncrease);
+
+            Debug.Log("Level up: ranged");
+        }
+    }
+
+    public void MeleeAttackLeveling(float damageDealt)
+    {
+        meleeXp += damageDealt * xpPerMelee;
+        if (meleeXp >= requiredXpMelee)
+        {
+            meleeLevel++;
+            requiredXpMelee = requiredXpMelee * (meleeLevel * 1.5f);
+            characterAttack.IncreaMeleeDamage(meleeDamageIncrease);
+
+            Debug.Log("Level up: melee");
+        }
+    }
+
+    public void HealthLeveling(float damageTaken)
+    {
+        healthXp += damageTaken * xpPerHit;
+        if (healthXp >= requiredXpHealth)
+        {
+            healthLevel++;
+            requiredXpHealth = requiredXpHealth * (healthLevel * 1.5f);
+            characterHealth.IncreaseHealth(healthPerLevel); 
+        }
+    }
+    
+
+
+
 }

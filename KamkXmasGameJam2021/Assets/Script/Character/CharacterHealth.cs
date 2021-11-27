@@ -11,15 +11,68 @@ public class CharacterHealth : MonoBehaviour
     [SerializeField, Min(1)]
     private float armour = 1;
 
+    [SerializeField]
+    private RPGSystem rpgSystem;
+    [SerializeField]
+    private BasicAIMovemnt basicAIMovemnt;
+
+    private Vector3 respawnLocation;
+
     private void Start()
     {
         currentHealth = maxHealth;
+        SetRespawn(transform.position);
     }
 
 
-    public void TakeDamage(float amount)
+    public float TakeDamage(float amount)
     {
         currentHealth -= amount / armour ;
-        Debug.Log("damage taken " + amount + ", health left " + currentHealth );
+
+        if (currentHealth <= 0) Respawn();
+        //Debug.Log("damage taken " + amount + ", health left " + currentHealth );
+        rpgSystem.HealthLeveling(amount / armour);
+        return amount / armour;
+    }
+
+    public void IncreaseHealth(float amount)
+    {
+        maxHealth += amount;
+        currentHealth += amount;
+    }
+
+    public void RestoreHealth(float amount)
+    {
+        float tempHealthCalculation = currentHealth + amount;
+
+        if (tempHealthCalculation > maxHealth)
+        {
+            currentHealth = maxHealth;
+        }
+        else
+        {
+            currentHealth += amount;
+        }
+
+
+
+    }
+
+    public void SetRespawn(Vector3 location)
+    {
+        respawnLocation = location;
+    }
+
+    public void Respawn()
+    {
+        currentHealth = maxHealth;
+        //Move to respawn location
+        transform.position = respawnLocation;
+
+        //if ai active, reset direction
+        if(basicAIMovemnt.enabled)
+        {
+            basicAIMovemnt.ResetDirection();
+        }
     }
 }

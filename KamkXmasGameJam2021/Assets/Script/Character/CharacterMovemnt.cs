@@ -19,11 +19,21 @@ public class CharacterMovemnt : MonoBehaviour
     [SerializeField]
     private float jumpPower;
 
+    [SerializeField]
+    private RPGSystem rpgSystem;
+    [SerializeField]
+    private CharacterHealth characterHealth;
+    [SerializeField]
+    private float minY = -10f;
+
+    private Vector3 previousPoint;
+
     // Start is called before the first frame update
     void Start()
     {
         speed = defaultsSpeed;
         rb = gameObject.GetComponent<Rigidbody>();
+        previousPoint = transform.position;
     }
 
 
@@ -34,6 +44,8 @@ public class CharacterMovemnt : MonoBehaviour
             isGrounded = true;
         }
         else isGrounded = false;
+
+        if (transform.position.y < minY) characterHealth.Respawn();
     }
 
 
@@ -43,6 +55,10 @@ public class CharacterMovemnt : MonoBehaviour
         Vector3 movemntDirection = (transform.right *realSpeed) + transform.position ;
 
         rb.position = movemntDirection;
+
+        float distance = Vector3.Distance(previousPoint, transform.position);
+        rpgSystem.SpeedLeveling(distance);
+        previousPoint = transform.position;
 
 
     }
@@ -54,12 +70,18 @@ public class CharacterMovemnt : MonoBehaviour
             Vector3 force = new Vector3(0, jumpPower, 0);
             //rb.AddForce(force);
             rb.velocity = force;
+            rpgSystem.JumpLeveling();
         }
     }
 
     public void IncreaseSpeed(float amount)
     {
         speed += amount;
+    }
+
+    public void IncreaseJump(float amount)
+    {
+        jumpPower += amount;
     }
 
 }
