@@ -269,7 +269,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Shape:
-    rid: 7789200485701386246
+    rid: 7789200485701386308
   m_Size: {x: 4.2742615, y: 5.848938, z: -2.9097388}
   m_Rotation: {x: 0, y: 0, z: 0, w: 1}
   m_PivotLocation: 0
@@ -281,7 +281,7 @@ MonoBehaviour:
   references:
     version: 2
     RefIds:
-    - rid: 7789200485701386246
+    - rid: 7789200485701386308
       type: {class: Cube, ns: UnityEngine.ProBuilder.Shapes, asm: Unity.ProBuilder}
 --- !u!23 &282091135020563545
 MeshRenderer:
@@ -290,7 +290,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 282091135020563540}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1

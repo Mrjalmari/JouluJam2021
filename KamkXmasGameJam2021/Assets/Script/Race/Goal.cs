@@ -10,6 +10,10 @@ public class Goal : MonoBehaviour
     private TextMeshProUGUI firstText, secondText, thirdText;
 
 
+    private void Start()
+    {
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if (first == null)
