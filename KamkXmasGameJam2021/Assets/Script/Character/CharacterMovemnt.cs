@@ -9,7 +9,7 @@ public class CharacterMovemnt : MonoBehaviour
 
     [SerializeField]
     public float defaultsSpeed = 2f;
-    private float speed;
+    private float speed = 10;
     private Rigidbody rb;
     private bool isGrounded;
     [SerializeField]
@@ -55,6 +55,11 @@ public class CharacterMovemnt : MonoBehaviour
             //rb.AddForce(force);
             rb.velocity = force;
         }
+    }
+
+    public void IncreaseSpeed(float amount)
+    {
+        speed += amount;
     }
 
 }

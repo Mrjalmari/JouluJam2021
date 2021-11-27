@@ -11,9 +11,9 @@ public class BasicAIMovemnt : MonoBehaviour
     private CharacterMovemnt characterMovemnt;
 
     [SerializeField]
-    private float dropCheckDistance;
+    private float dropCheckDistance = 0.1f;
     [SerializeField]
-    private float dropCheckDown;
+    private float dropCheckDown = 1;
     [SerializeField]
     private LayerMask groundLayers;
     [SerializeField]
