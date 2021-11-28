@@ -37,11 +37,23 @@ public class CharacterAttack : MonoBehaviour
 
 
 
+   private void Update()
+    {
+        if (currentMWTime >= 0)
+        {
+            currentMWTime -= Time.deltaTime;
+        }
+        else allowMelee = true;
+
+        if (currentRWTime >= 0) currentRWTime -= Time.deltaTime;
+        else allowRanged = true;
+    }
+
     public void ChangeDirection(float newDirection)
     {
         if (newDirection > 0)
         {
-            directionMod = 1; 
+            directionMod = 1;
         }
         else if (newDirection < 0)
         {
@@ -52,14 +64,17 @@ public class CharacterAttack : MonoBehaviour
 
     public void MeleeAttack()
     {
-        Vector3 startPoint = new Vector3(transform.position.x + (attackPointDistance* directionMod ), transform.position.y + attackpointHeight ,transform.position.z);
+        Vector3 startPoint = new Vector3(transform.position.x + (attackPointDistance * directionMod), transform.position.y + attackpointHeight, transform.position.z);
 
-        if(Physics.Raycast(startPoint, Vector3.right*directionMod, out RaycastHit raycastHit, meleeMaxDistance) && allowMelee)
+        if (Physics.Raycast(startPoint, Vector3.right * directionMod, out RaycastHit raycastHit, meleeMaxDistance) && allowMelee)
         {
             if (raycastHit.collider.CompareTag("Character"))
             {
-               rpgSystem.MeleeAttackLeveling( raycastHit.collider.GetComponent<CharacterHealth>().TakeDamage(meleeDamage));
+                rpgSystem.MeleeAttackLeveling(raycastHit.collider.GetComponent<CharacterHealth>().TakeDamage(meleeDamage));
             }
+
+            allowMelee = false;
+            currentMWTime = meleeWaitTime;
         }
     }
 
@@ -73,6 +88,9 @@ public class CharacterAttack : MonoBehaviour
             projectileScript.SetOwner(gameObject);
             projectileScript.SetDirection(directionMod);
             projectileScript.SetDamage(rangedDamage);
+
+            allowRanged = false;
+            currentRWTime = rangedWaitTime;
         }
 
     }
@@ -85,5 +103,17 @@ public class CharacterAttack : MonoBehaviour
     public void IncreaMeleeDamage(float amount)
     {
         meleeDamage += amount;
+    }
+
+    public float GetDirection()
+    {
+        return directionMod;
+    }
+
+
+    public void AllowAttack()
+    {
+        allowMelee = true;
+        allowRanged = true;
     }
 }
