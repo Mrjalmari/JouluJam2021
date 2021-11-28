@@ -8,4 +8,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MainMenu.unity
     guid: f132fb4345f60a34ca57839b3c3cdfef
+  - enabled: 1
+    path: Assets/Scenes/Race1.unity
+    guid: 7177095c934586242b6bb582ebb1650a
+  - enabled: 1
+    path: Assets/Scenes/Race2.unity
+    guid: 9c9ae649114c6634d850dcdcbf24b0e6
+  - enabled: 1
+    path: Assets/Scenes/Race3.unity
+    guid: f9263fc0b3dd18a4bb64a49879d0cdd8
   m_configObjects: {}

@@ -20,13 +20,13 @@ public class LevelGeneration : MonoBehaviour
     {
         int randomIndex = Random.Range(0, levelPieces.Count);
 
-        if (levelLenght > 0)
+        if (levelLenght >= 0)
         {
             GameObject levelPiece = Instantiate(levelPieces[randomIndex], generationPoint.transform.position, transform.rotation);
             levelPiece.GetComponent<LevelGeneration>().LevelLenghtLess(levelLenght-1);
         }
         else
-            Instantiate(goal, transform.position, transform.rotation);
+            Instantiate(goal, generationPoint.transform.position, transform.rotation);
 
 
 
