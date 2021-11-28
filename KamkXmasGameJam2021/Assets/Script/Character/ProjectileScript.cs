@@ -18,11 +18,11 @@ public class ProjectileScript : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject != owner && other.CompareTag("Character"))
+        if (other.gameObject != owner && other.CompareTag("Character") )
         {
             owner.GetComponent<RPGSystem>().RangedAttackLeveling(other.gameObject.GetComponent<CharacterHealth>().TakeDamage(damage));
         }
-        if (other.gameObject != owner)
+        if (other.gameObject != owner && !other.CompareTag("Projectile"))
             Destroy(gameObject);
     }
 
